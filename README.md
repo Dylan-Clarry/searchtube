@@ -1,28 +1,30 @@
-# Create T3 App
+# SearchTube
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+SearchTube is a web app that uses YouTube's API to let users watch videos from a search bar only. The goal is to make YouTube a more intentional viewing experience by forgoing the algorithm completely.
+The app will also allow users to set daily viewing limits and blacklist certain types of videos (ie. react content).
 
-## What's next? How do I make an app with this?
+This will also eventually become a PWA to serve as an alternative to the default YouTube app on mobile devices.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Why build this?
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+I have wasted more time watching junk content on YouTube than I'm willing to admit. I believe that when used responsibly YouTube can be a powerful tool to learn and reinforce skills, studies, and work, but can also become the ultimate pitfall of hours wasted on junk content that you'll forget about in 24 hours.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Milestones
 
-## Learn More
+- Basic setup (Project setup, page design, Prisma Schema)
+- Next Auth setup
+- Search bar using YouTube API
+- Blacklist
+- Daily limits
+- PWA
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Tech stack
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Built using the t3 Stack:
+- NextJS
+- TypeScript
+- tRPC
+- Tailwind
+- Prisma
+- PostgreSQL
+- NextAuthJS
