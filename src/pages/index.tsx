@@ -1,6 +1,14 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 
-const Form = () => {
+const fetchSearch = async () => {
+    const res = await fetch("/api/ytSearch");
+    const data = await res.json();
+    console.log("data:", data);
+};
+
+fetchSearch();
+
+const SearchBar = () => {
     return (
         <form
             className="flex"
@@ -36,14 +44,14 @@ const Home = () => {
         <main className="flex flex-col items-center">
             <h1 className="text-3xl pt-10">SearchTube</h1>
             <p>A better way to consume content</p>
+            <div className="pt-6">
+                <SearchBar />
+            </div>
             <div className="pt-10">
                 {session ? (
                     <>
                         <p>Hi {session.user?.name}</p>
                         <button onClick={() => signOut()}>Logout</button>
-                        <div className="pt-6">
-                            <Form />
-                        </div>
                     </>
                 ) : (
                     <button onClick={() => signIn("discord")}>
