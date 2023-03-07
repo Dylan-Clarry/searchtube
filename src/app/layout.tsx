@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
 
 export const metadata = {
   title: "SearchTube",
@@ -15,9 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar />
-        <main className="container mt-12 px-2 sm:px-0 mx-auto">{children}</main>
+      <NavBar />
+        <div className="h-full grid grid-cols-6">
+          <SideBar />
+          <main className="col-span-5">{children}</main>
+        </div>
       </body>
     </html>
   );
 }
+
+// <main className="mt-14 mx-10 flex flex-row h-full">

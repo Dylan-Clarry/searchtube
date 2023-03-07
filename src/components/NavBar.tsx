@@ -4,11 +4,32 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="px-2 sm:px-4 py-2.5 fixed w-full z-10 top-0 left-0 border-b border-neutral-800">
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <Link href="/">Logo</Link>
-        <span>Profile</span>
-      </div>
-    </nav>
+    <header className="h-12 fixed z-10 w-full top-0 flex items-center border-b border-neutral-800">
+      <nav className="px-4 flex w-full justify-between">
+        <div className="flex flex-wrap">
+          <HamburgerIcon />
+          <Link className="ml-2" href="/">Logo</Link>
+        </div>
+        <ProfileIcon />
+      </nav>
+    </header>
+  );
+}
+
+function HamburgerIcon() {
+  return (
+    <div className="space-y-1 mt-1">
+      <div className="w-5 h-0.5 bg-neutral-100"></div>
+      <div className="w-5 h-0.5 bg-neutral-100"></div>
+      <div className="w-5 h-0.5 bg-neutral-100"></div>
+    </div>
+  );
+}
+
+function ProfileIcon() {
+  return (
+    <div>
+      <h1>Profile</h1>
+    </div>
   );
 }
