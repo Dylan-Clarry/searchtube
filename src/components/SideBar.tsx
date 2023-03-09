@@ -12,8 +12,6 @@ export default function SideBar() {
                     <li>Settings</li>
                 </ul>
             </nav>
-        </aside> 
+        </aside>
     );
 }
-
-// <nav className="border-r border-neutral-800 pr-4 pt-4 h-full">
