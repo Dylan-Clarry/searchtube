@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import getYTSearchResults from "@/lib/youtubeSearch";
-
-const key = getYTSearchResults();
-console.log("key", process.env.YOUTUBE_API_KEY);
+import useSWR from "swr";
+import fetcher from "@/lib/fetcher";
 
 export default function Home() {
+    const { data, error } = useSWR("/api/youtubesearch", fetcher);
+    console.log("data", data, error);
+
     const [searchValue, setSearchValue] = useState("");
     return (
         <div className="mt-4">
